@@ -1,7 +1,7 @@
 apiVersion: "agones.dev/v1"
 kind: GameServer
 metadata:
-  generateName: "unity-simple-server-"
+  generateName: "dcp-simple-server-"
 spec:
   ports:
   - name: default
@@ -10,7 +10,7 @@ spec:
   template:
     spec:
       containers:
-      - name: unity-simple-server
+      - name: dcp-simple-server
         image: gcr.io/agones-training-3/nubrazz/dcp:0.0
       resources:
         requests:
