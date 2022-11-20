@@ -1,0 +1,21 @@
+apiVersion: "agones.dev/v1"
+kind: GameServer
+metadata:
+  generateName: "unity-simple-server-"
+spec:
+  ports:
+  - name: default
+    portPolicy: Dynamic
+    containerPort: 7777
+  template:
+    spec:
+      containers:
+      - name: unity-simple-server
+        image: gcr.io/agones-training-3/nubrazz/dcp:0.0
+      resources:
+        requests:
+          memory: "128Mi"
+          cpu: "128m"
+        limits:
+          memory: "128Mi"
+          cpu: "128m"
