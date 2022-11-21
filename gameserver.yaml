@@ -8,7 +8,7 @@ spec:
     portPolicy: Dynamic
     containerPort: 7777
   health:
-    disabled: true
+    disabled: false
     initialDelaySeconds: 5
     periodSeconds: 5
     failureThreshold: 3
@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dcp-agones-simple-server
-        image: gcr.io/agones-training-3/nubrazz/dcp:0.0
+        image: gcr.io/agones-training-3/nubrazz/dcp:0.1
       resources:
         requests:
           memory: "128Mi"
