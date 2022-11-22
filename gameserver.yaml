@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: dcp-agones-simple-server
-        image: gcr.io/agones-training-3/nubrazz/dcp:0.2
+        image: gcr.io/agones-training-3/nubrazz/dcp:0.3
       resources:
         requests:
           memory: "128Mi"
