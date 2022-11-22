@@ -5,8 +5,10 @@ metadata:
 spec:
   ports:
   - name: default
-    portPolicy: Dynamic
-    containerPort: 7777
+    portPolicy: Static
+    containerPort: 7770
+    hostPort: 7777
+    protocol: UDP
   health:
     disabled: false
     initialDelaySeconds: 5
