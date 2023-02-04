@@ -31,11 +31,11 @@ spec:
         spec:
           containers:
           - name: dcp-agones-simple-server
-            image: gcr.io/agones-training-371916/nubrazz/dcp:3.6
+            image: gcr.io/agones-training-371916/nubrazz/dcp:3.7
           resources:
             requests:
-              memory: "512Mi"
-              cpu: "512m"
+              memory: "128Mi"
+              cpu: "128m"
             limits:
-              memory: "512Mi"
-              cpu: "512m"
+              memory: "128Mi"
+              cpu: "128m"
