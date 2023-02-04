@@ -6,7 +6,7 @@ spec:
   ports:
   - name: default
     portPolicy: Dynamic
-    containerPort: 7770
+    containerPort: 6969
     protocol: UDP
   health:
     disabled: false
@@ -17,11 +17,11 @@ spec:
     spec:
       containers:
       - name: dcp-agones-simple-server
-        image: gcr.io/agones-training-371916/nubrazz/dcp:3.5
+        image: gcr.io/agones-training-371916/nubrazz/dcp:3.6
       resources:
         requests:
-          memory: "128Mi"
-          cpu: "128m"
+          memory: "512Mi"
+          cpu: "512m"
         limits:
-          memory: "128Mi"
-          cpu: "128m"
+          memory: "512Mi"
+          cpu: "512m"
