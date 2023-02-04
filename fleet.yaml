@@ -1,0 +1,41 @@
+apiVersion: "agones.dev/v1"
+kind: Fleet
+metadata:
+  name: dcp-agones-simple-fleet
+spec:
+  replicas: 2
+  scheduling: Packed
+  strategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxSurge: 25%
+      maxUnavailable: 25%
+  template:
+    metadata:
+      labels:
+        foo: bar
+    spec:
+      ports:
+      - name: default
+        portPolicy: Dynamic
+        containerPort: 6969
+        protocol: UDP
+      health:
+        disabled: false
+        initialDelaySeconds: 5
+        periodSeconds: 5
+        failureThreshold: 3
+      sdkServer:
+        logLevel: Info
+      template:
+        spec:
+          containers:
+          - name: dcp-agones-simple-server
+            image: gcr.io/agones-training-371916/nubrazz/dcp:3.6
+          resources:
+            requests:
+              memory: "512Mi"
+              cpu: "512m"
+            limits:
+              memory: "512Mi"
+              cpu: "512m"
