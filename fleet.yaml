@@ -34,8 +34,8 @@ spec:
             image: gcr.io/agones-training-371916/nubrazz/dcp:3.8
           resources:
             requests:
-              memory: "128Mi"
+              memory: "512Mi"
               cpu: "128m"
             limits:
-              memory: "128Mi"
+              memory: "512Mi"
               cpu: "128m"
