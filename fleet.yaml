@@ -3,7 +3,7 @@ kind: Fleet
 metadata:
   name: dcp-agones-simple-fleet
 spec:
-  replicas: 1
+  replicas: 2
   scheduling: Distributed
   strategy:
     type: RollingUpdate
