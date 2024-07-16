@@ -28,8 +28,8 @@ spec:
           image: gcr.io/drift-car-party-demo/nubrazz/dcp:5.0
           resources:
             requests:
-              memory: 64Mi
-              cpu: 20m
+              memory: 800Mi
+              cpu: 400m
             limits:
               memory: 64Mi
-              cpu: 20m
+              cpu: 400m
