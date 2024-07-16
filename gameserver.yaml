@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dcp-agones-simple-server
-          image: gcr.io/drift-car-party-demo/nubrazz/dcp:4.7
+          image: gcr.io/drift-car-party-demo/nubrazz/dcp:4.8
       resources:
         requests:
           memory: "400M"
