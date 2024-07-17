@@ -9,7 +9,7 @@ spec:
     containerPort: 7934
     protocol: UDP
   health:
-    disabled: true
+    disabled: false
     initialDelaySeconds: 5
     periodSeconds: 5
     failureThreshold: 3
@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: dcp-agones-simple-server
-          image: gcr.io/drift-car-party-demo/nubrazz/dcp:5.2
+          image: gcr.io/drift-car-party-demo/nubrazz/dcp:5.3
       resources:
         requests:
           memory: 64Mi
